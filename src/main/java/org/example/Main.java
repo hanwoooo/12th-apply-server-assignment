@@ -4,12 +4,17 @@ import java.util.Scanner;
 
 public class Main {
 
+    public static void Main_Menu(){
+        System.out.println("----- 작업 -----\n");
+        System.out.println("1. 스터디룸 예약\n2. 예약 현황 조회\n3. 문의 남기기\n4. 문의 리스트 보기\n5. 프로그램 종료\n");
+        System.out.print("작업을 선택하세요: ");
+    }
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         Reservation reservation = new Reservation();
         Show show = new Show();
-        Inquiry inquiry = new Inquiry();
+        Inquery inquery = new Inquery();
 
         int menuNum = 0; //메뉴의 선택지 숫자 일단 0으로 초기화 하여 while문 안에서 다시 입력 받도록 한다.
 
@@ -25,9 +30,7 @@ public class Main {
         System.out.println("스터디룸 예약 프로그램입니다.\n");
 
         while (menuNum != 5) {
-            System.out.println("----- 작업 -----\n");
-            System.out.println("1. 스터디룸 예약\n2. 예약 현황 조회\n3. 문의 남기기\n4. 문의 리스트 보기\n5. 프로그램 종료\n");
-            System.out.print("작업을 선택하세요: ");
+            Main_Menu();
             menuNum = scanner.nextInt();
 
             switch (menuNum) {
@@ -49,12 +52,12 @@ public class Main {
                     break;
                 case 3:
                     // 문의 아이디, 내용 입력
-                    inquiry.Get_Inquiry_Info();
+                    inquery.Get_Inquery_Info();
                     // 출력을 위한 문의 내용 저장
-                    inquiry.Add_Inquiry_Info();
+                    inquery.Add_Inquery_Info();
                     break;
                 case 4:
-                    inquiry.Show_Inquiry_List();
+                    inquery.Show_Inquery_List();
                     break;
                 case 5:
                     System.out.println("\n프로그램을 종료합니다...");

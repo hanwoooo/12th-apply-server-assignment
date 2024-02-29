@@ -56,7 +56,6 @@ public class Reservation {
 
     public boolean Check_Early_Reservation(char[][] Room) {
         // 4. 이미 예약이 되어있는 경우 & 예약이 없을시 예약하기
-
         // 예약유무 확인
         for (int i = startTime - NUM_FOR_ARRAY; i < endTime - NUM_FOR_ARRAY; i++) {
             if (Room[Room_type][i] == 'O') {
