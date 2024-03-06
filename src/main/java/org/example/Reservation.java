@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Reservation {
     Scanner scanner = new Scanner(System.in);
-    static int NUM_FOR_ARRAY = 10; //  배열값 비교를 위한 변수 ex) 10시 --> 0번째 배열, 11시 --> 1번째 배열 ...
+    final int NUM_FOR_ARRAY = 10; //  배열값 비교를 위한 변수 ex) 10시 --> 0번째 배열, 11시 --> 1번째 배열 ...
 
     char studyRoom; // 예약할 스터디룸
     int startTime; // 사용 시작 시간

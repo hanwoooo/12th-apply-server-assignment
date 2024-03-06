@@ -1,7 +1,7 @@
 package org.example;
 
 public class Show {
-    static int NUM_FOR_ARRAY = 10; //  배열값 비교를 위한 변수 ex) 10시 --> 0번째 배열, 11시 --> 1번째 배열 ...
+    final int NUM_FOR_ARRAY = 10; //  배열값 비교를 위한 변수 ex) 10시 --> 0번째 배열, 11시 --> 1번째 배열 ...
 
     public void Show_List(char[][] reserve_list) {
         System.out.println("\n----- 예약 현황 -----\n| A || B || C |");
